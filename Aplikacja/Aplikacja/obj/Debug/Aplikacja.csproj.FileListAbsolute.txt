@@ -1,0 +1,16 @@
+D:\IO\Aplikacja\Aplikacja\bin\Debug\Aplikacja.exe.config
+D:\IO\Aplikacja\Aplikacja\bin\Debug\Aplikacja.exe
+D:\IO\Aplikacja\Aplikacja\bin\Debug\Aplikacja.pdb
+D:\IO\Aplikacja\Aplikacja\obj\Debug\Aplikacja.csprojResolveAssemblyReference.cache
+D:\IO\Aplikacja\Aplikacja\obj\Debug\Aplikacja.Properties.Resources.resources
+D:\IO\Aplikacja\Aplikacja\obj\Debug\Aplikacja.csproj.GenerateResource.Cache
+D:\IO\Aplikacja\Aplikacja\obj\Debug\Aplikacja.exe
+D:\IO\Aplikacja\Aplikacja\obj\Debug\Aplikacja.pdb
+D:\IO\Aplikacja\Aplikacja\obj\Debug\Aplikacja.Form1.resources
+D:\IO\Aplikacja\Aplikacja\obj\Debug\Aplikacja.Menedżer.resources
+D:\IO\Aplikacja\Aplikacja\obj\Debug\Aplikacja.Pracownik.resources
+D:\IO\Aplikacja\Aplikacja\obj\Debug\Aplikacja.Zamówienia.resources
+D:\IO\Aplikacja\Aplikacja\obj\Debug\Aplikacja.Dodaj_zamowienie.resources
+D:\IO\Aplikacja\Aplikacja\obj\Debug\Aplikacja.Menu_pracownik.resources
+D:\IO\Aplikacja\Aplikacja\obj\Debug\Aplikacja.Menu_towar.resources
+D:\IO\Aplikacja\Aplikacja\obj\Debug\Aplikacja.Usun_zamowienie.resources
