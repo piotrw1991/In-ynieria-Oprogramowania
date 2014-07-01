@@ -12,7 +12,7 @@ namespace Aplikacja
 {
     public partial class Pracownik : Form
     {
-        Zamówienia zamowienia = new Zamówienia();
+        Menu_zamówień zamowienia = new Menu_zamówień();
         public Pracownik()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace Aplikacja
             this.Hide();
             foreach (Form frm in Application.OpenForms)
             {
-                if (frm is Form1)
+                if (frm is Logowanie)
                 {
                     frm.Show();
                     return;
@@ -37,7 +37,7 @@ namespace Aplikacja
             this.Hide();
             foreach (Form frm in Application.OpenForms)
             {
-                if (frm is Zamówienia)
+                if (frm is Menu_zamówień)
                 {
                     frm.Show();
                     return;

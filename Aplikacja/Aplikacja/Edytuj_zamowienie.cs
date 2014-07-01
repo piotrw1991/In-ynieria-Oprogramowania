@@ -16,5 +16,18 @@ namespace Aplikacja
         {
             InitializeComponent();
         }
+
+        private void wroc_Click(object sender, EventArgs e)
+        {
+            foreach (Form frm in Application.OpenForms)
+            {
+                this.Hide();
+                if (frm is Menu_zamówień)
+                {
+                    frm.Show();
+                    return;
+                }
+            }
+        }
     }
 }

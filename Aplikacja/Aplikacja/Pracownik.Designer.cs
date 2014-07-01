@@ -34,9 +34,12 @@
             // 
             // Wyloguj
             // 
-            this.Wyloguj.Location = new System.Drawing.Point(12, 309);
+            this.Wyloguj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Wyloguj.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.Wyloguj.Location = new System.Drawing.Point(9, 251);
+            this.Wyloguj.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Wyloguj.Name = "Wyloguj";
-            this.Wyloguj.Size = new System.Drawing.Size(99, 34);
+            this.Wyloguj.Size = new System.Drawing.Size(75, 32);
             this.Wyloguj.TabIndex = 4;
             this.Wyloguj.Text = "Wyloguj";
             this.Wyloguj.UseVisualStyleBackColor = true;
@@ -45,9 +48,11 @@
             // menu_zamowienia
             // 
             this.menu_zamowienia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.menu_zamowienia.Location = new System.Drawing.Point(88, 132);
+            this.menu_zamowienia.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.menu_zamowienia.Location = new System.Drawing.Point(66, 107);
+            this.menu_zamowienia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.menu_zamowienia.Name = "menu_zamowienia";
-            this.menu_zamowienia.Size = new System.Drawing.Size(217, 49);
+            this.menu_zamowienia.Size = new System.Drawing.Size(163, 40);
             this.menu_zamowienia.TabIndex = 5;
             this.menu_zamowienia.Text = "Menu Zamówienia";
             this.menu_zamowienia.UseVisualStyleBackColor = true;
@@ -55,14 +60,16 @@
             // 
             // Pracownik
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 355);
+            this.BackColor = System.Drawing.Color.SteelBlue;
+            this.ClientSize = new System.Drawing.Size(286, 288);
             this.Controls.Add(this.menu_zamowienia);
             this.Controls.Add(this.Wyloguj);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Pracownik";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Pracownik";
+            this.Text = "Menu_Pracownik";
             this.ResumeLayout(false);
 
         }

@@ -13,7 +13,6 @@ namespace Aplikacja
 
         public Sklep(string name, int nip)
         {
-            Zmienne.Sklepy = new List<Sklep>();
             Nazwa = name;
             NIP = nip;
         }

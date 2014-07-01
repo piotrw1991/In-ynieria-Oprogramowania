@@ -11,6 +11,21 @@
     <AssemblyName>Aplikacja</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,9 +46,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,11 +61,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aplikacja_databaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Aplikacja_databaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dodaj_pracownika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dodaj_pracownika.Designer.cs">
+      <DependentUpon>Dodaj_pracownika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dodaj_towar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dodaj_towar.Designer.cs">
+      <DependentUpon>Dodaj_towar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dodaj_zamowienie.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dodaj_zamowienie.Designer.cs">
       <DependentUpon>Dodaj_zamowienie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edytuj_pracownika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edytuj_pracownika.Designer.cs">
+      <DependentUpon>Edytuj_pracownika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edytuj_towar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edytuj_towar.Designer.cs">
+      <DependentUpon>Edytuj_towar.cs</DependentUpon>
     </Compile>
     <Compile Include="Edytuj_zamowienie.cs">
       <SubType>Form</SubType>
@@ -56,17 +102,17 @@
     <Compile Include="Edytuj_zamowienie.Designer.cs">
       <DependentUpon>Edytuj_zamowienie.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Logowanie.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Logowanie.Designer.cs">
+      <DependentUpon>Logowanie.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menedżer.cs">
+    <Compile Include="Menu_Menedżer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menedżer.Designer.cs">
-      <DependentUpon>Menedżer.cs</DependentUpon>
+    <Compile Include="Menu_Menedżer.Designer.cs">
+      <DependentUpon>Menu_Menedżer.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu_pracownik.cs">
       <SubType>Form</SubType>
@@ -88,28 +134,79 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rejestracja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rejestracja.Designer.cs">
+      <DependentUpon>Rejestracja.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sklep.cs" />
+    <Compile Include="Usun_pracownika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usun_pracownika.Designer.cs">
+      <DependentUpon>Usun_pracownika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usun_towar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usun_towar.Designer.cs">
+      <DependentUpon>Usun_towar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usun_zamowienie.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Usun_zamowienie.Designer.cs">
       <DependentUpon>Usun_zamowienie.cs</DependentUpon>
     </Compile>
-    <Compile Include="Zamówienia.cs">
+    <Compile Include="wyswietl_zamówienia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Zamówienia.Designer.cs">
-      <DependentUpon>Zamówienia.cs</DependentUpon>
+    <Compile Include="wyswietl_zamówienia.Designer.cs">
+      <DependentUpon>wyswietl_zamówienia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wyświetl_pracowników.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wyświetl_pracowników.Designer.cs">
+      <DependentUpon>Wyświetl_pracowników.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wyświetl_towary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wyświetl_towary.Designer.cs">
+      <DependentUpon>Wyświetl_towary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_zamówień.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_zamówień.Designer.cs">
+      <DependentUpon>Menu_zamówień.cs</DependentUpon>
     </Compile>
     <Compile Include="Zmienne.cs" />
+    <EmbeddedResource Include="Dodaj_pracownika.resx">
+      <DependentUpon>Dodaj_pracownika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dodaj_towar.resx">
+      <DependentUpon>Dodaj_towar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dodaj_zamowienie.resx">
       <DependentUpon>Dodaj_zamowienie.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Edytuj_pracownika.resx">
+      <DependentUpon>Edytuj_pracownika.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menedżer.resx">
-      <DependentUpon>Menedżer.cs</DependentUpon>
+    <EmbeddedResource Include="Edytuj_towar.resx">
+      <DependentUpon>Edytuj_towar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edytuj_zamowienie.resx">
+      <DependentUpon>Edytuj_zamowienie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logowanie.resx">
+      <DependentUpon>Logowanie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Menedżer.resx">
+      <DependentUpon>Menu_Menedżer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu_pracownik.resx">
       <DependentUpon>Menu_pracownik.cs</DependentUpon>
@@ -129,12 +226,42 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Rejestracja.resx">
+      <DependentUpon>Rejestracja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usun_pracownika.resx">
+      <DependentUpon>Usun_pracownika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usun_towar.resx">
+      <DependentUpon>Usun_towar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Usun_zamowienie.resx">
       <DependentUpon>Usun_zamowienie.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Zamówienia.resx">
-      <DependentUpon>Zamówienia.cs</DependentUpon>
+    <EmbeddedResource Include="wyswietl_zamówienia.resx">
+      <DependentUpon>wyswietl_zamówienia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Wyświetl_pracowników.resx">
+      <DependentUpon>Wyświetl_pracowników.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wyświetl_towary.resx">
+      <DependentUpon>Wyświetl_towary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_zamówień.resx">
+      <DependentUpon>Menu_zamówień.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Aplikacja_databaseDataSet.xsc">
+      <DependentUpon>Aplikacja_databaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Aplikacja_databaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Aplikacja_databaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Aplikacja_databaseDataSet.xss">
+      <DependentUpon>Aplikacja_databaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\Aplikacja.Aplikacja_databaseDataSetTableAdapters.UsersTableAdapter.datasource" />
     <None Include="Properties\DataSources\Sklep.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -148,6 +275,32 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Aplikacja_database.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Aplikacja_database_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Aplikacja_database.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
